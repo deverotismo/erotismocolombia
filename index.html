@@ -27,7 +27,7 @@
             <a href="#nosotros" class="text-white hover:text-yellow-300 transition-colors duration-300 font-medium">¿Cómo funciona?</a>
             <a href="#modelos" class="text-white hover:text-yellow-300 transition-colors duration-300 font-medium">Novias</a>
             <a href="#contacto" class="text-white hover:text-yellow-300 transition-colors duration-300 font-medium">Trabaja con nosotros</a>
-            <a href="#mis-novias"
+            <a href="Pago.html"
      class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-red-900 px-6 py-2 rounded-full text-base font-semibold hover:from-yellow-300 hover:to-yellow-500 transform hover:scale-105 transition-all duration-300 shadow-lg">
     Quiero mis novias
   </a>
@@ -47,9 +47,10 @@
           <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" id="hero-subtitle">
             Somos hombres, nuestro deber es proveer y necesitamos mujeres con quien tener sexo sin tanta complicación
           </p>
-          <button href="mis-novias.html" class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-red-900 px-8 py-4 rounded-full text-lg font-semibold hover:from-yellow-300 hover:to-yellow-500 transform hover:scale-105 transition-all duration-300 shadow-lg">
-            Quiero pagar por el servicio
-          </button>
+            <a href="Pago.html"
+     class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-red-900 px-6 py-2 rounded-full text-base font-semibold hover:from-yellow-300 hover:to-yellow-500 transform hover:scale-105 transition-all duration-300 shadow-lg">
+    Quiero pagar por el servicio
+  </a>
         </div>
       </div>
     </section>
@@ -78,9 +79,14 @@
             </div>
           </div>
           <div class="relative">
-            <div class="w-full h-96 bg-gradient-to-br from-red-100 to-yellow-100 rounded-2xl flex items-center justify-center shadow-xl">
-              <div class="text-6xl">📸</div>
-            </div>
+<div class="w-full h-96 bg-gradient-to-br from-red-100 to-yellow-100 rounded-2xl flex items-center justify-center shadow-xl overflow-hidden relative">
+  <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+    <source src="assets/video_home.mp4" type="video/mp4">
+    Tu navegador no soporta la reproducción de video.
+  </video>
+  <div class="absolute inset-0 bg-red-500 bg-opacity-30 z-10"></div> <!-- capa roja semitransparente -->
+  <div class="text-6xl z-20">😈</div>
+</div>
           </div>
         </div>
       </div>
@@ -91,40 +97,57 @@
    <section id="modelos" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
      <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-gray-900 mb-4" id="models-title">Nuestras Novias</h2>
+      <h2 class="text-4xl font-bold text-gray-900 mb-4" id="models-title">Nuestras Novias Disponibles</h2>
       <p class="text-xl text-gray-600">Chicas tiernas, apasionadas y con cuerpos que te harán tocar el paraíso</p>
      </div>
      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-image" id="modalImage" alt="Vista ampliada">
+  <div class="modal-controls">
+    <button id="prevPhoto" class="nav-btn">⟨</button>
+    <button id="nextPhoto" class="nav-btn">⟩</button>
+  </div>
+</div>
+
        <!-- Model Card 1 -->
-      <div class="model-card rounded-2xl p-6 shadow-lg">
-       <div class="w-full h-64 bg-gradient-to-br from-red-200 to-pink-200 rounded-xl mb-4 flex items-center justify-center">
-        <div class="text-4xl">
-         👩🏻‍🦰
-        </div>
-       </div>
-       <h3 class="text-xl font-semibold text-gray-900 mb-2">Sofia Martínez</h3>
-       <p class="text-gray-600 mb-3">20 años<br>Universitaria<br>Delgada</p>
-       <div class="flex flex-wrap gap-2"><span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Pelinegra</span> <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">Fines de semana</span>
-       </div>
-      </div>
+<div class="model-card rounded-2xl p-6 shadow-lg">
+  <div class="w-full h-64 bg-gradient-to-br from-red-200 to-pink-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden relative model-gallery">
+    <img src="assets/sofia_martinez1.png" class="model-photo active" alt="Sofía 1">
+    <img src="assets/sofia_martinez2.png" class="model-photo" alt="Sofía 2">
+    <img src="assets/sofia_martinez3.png" class="model-photo" alt="Sofía 3">
+  </div>
+  <h3 class="text-xl font-semibold text-gray-900 mb-2">Sofía Martínez</h3>
+  <p class="text-gray-600 mb-3">20 años<br>Universitaria<br>Delgada</p>
+  <div class="flex flex-wrap gap-2">
+    <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Pelinegra</span>
+    <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">Fines de semana</span>
+  </div>
+</div>
        <!-- Model Card 2 -->
-      <div class="model-card rounded-2xl p-6 shadow-lg">
-       <div class="w-full h-64 bg-gradient-to-br from-yellow-200 to-orange-200 rounded-xl mb-4 flex items-center justify-center">
-        <div class="text-4xl">
-         👩🏽‍🦱
-        </div>
-       </div>
-       <h3 class="text-xl font-semibold text-gray-900 mb-2">Isabella Rodriguez</h3>
-       <p class="text-gray-600 mb-3">20 años<br>Universitaria<br>Delgada</p>
-       <div class="flex flex-wrap gap-2"><span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Pelinegra</span> <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">Fines de semana</span>
-       </div>       
-      </div>
+<div class="model-card rounded-2xl p-6 shadow-lg">
+  <div class="w-full h-64 bg-gradient-to-br from-red-200 to-pink-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden relative model-gallery">
+    <img src="assets/Isabella_rodriguez1.png" class="model-photo active" alt="Isabella 1">
+    <img src="assets/Isabella_rodriguez2.png" class="model-photo" alt="Isabella 2">
+    <img src="assets/Isabella_rodriguez3.png" class="model-photo" alt="Isabella 3">
+  </div>
+  <h3 class="text-xl font-semibold text-gray-900 mb-2">Isabella Rogríguez</h3>
+  <p class="text-gray-600 mb-3">20 años<br>Universitaria<br>Delgada</p>
+  <div class="flex flex-wrap gap-2">
+    <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Pelinegra</span>
+    <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">Fines de semana</span>
+  </div>
+</div>
        <!-- Model Card 3 -->
       <div class="model-card rounded-2xl p-6 shadow-lg">
        <div class="w-full h-64 bg-gradient-to-br from-pink-200 to-red-200 rounded-xl mb-4 flex items-center justify-center">
-        <div class="text-4xl">
-         👩🏼‍🦳
-        </div>
+<div class="w-full h-64 bg-gradient-to-br from-pink-200 to-red-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden relative model-gallery">
+  <img src="assets/carmen_lopez1.png" class="model-photo active" alt="Carmen 1">
+  <img src="assets/carmen_lopez2.png" class="model-photo" alt="Carmen 2">
+  <img src="assets/carmen_lopez3.png" class="model-photo" alt="Carmen 3">
+</div>
+
        </div>
        <h3 class="text-xl font-semibold text-gray-900 mb-2">Carmen López</h3>
        <p class="text-gray-600 mb-3">20 años<br>Universitaria<br>Delgada</p>
@@ -134,9 +157,11 @@
        <!-- Model Card 4 -->
       <div class="model-card rounded-2xl p-6 shadow-lg">
        <div class="w-full h-64 bg-gradient-to-br from-red-300 to-yellow-300 rounded-xl mb-4 flex items-center justify-center">
-        <div class="text-4xl">
-         👩🏾
-        </div>
+<div class="w-full h-64 bg-gradient-to-br from-red-200 to-pink-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden relative model-gallery">
+  <img src="assets/valentina_torres1.png" class="model-photo active" alt="Valentina 1">
+  <img src="assets/valentina_torres2.png" class="model-photo" alt="Valentina 2">
+  <img src="assets/valentina_torres3.png" class="model-photo" alt="Valentina 3">
+</div>
        </div>
        <h3 class="text-xl font-semibold text-gray-900 mb-2">Valentina Torres</h3>
        <p class="text-gray-600 mb-3">20 años<br>Universitaria<br>Delgada</p>
@@ -146,9 +171,11 @@
        <!-- Model Card 5 -->
       <div class="model-card rounded-2xl p-6 shadow-lg">
        <div class="w-full h-64 bg-gradient-to-br from-yellow-300 to-red-300 rounded-xl mb-4 flex items-center justify-center">
-        <div class="text-4xl">
-         👩🏻
-        </div>
+<div class="w-full h-64 bg-gradient-to-br from-red-200 to-pink-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden relative model-gallery">
+  <img src="assets/lucia_fernandez1.png" class="model-photo active" alt="Lucía 1">
+  <img src="assets/lucia_fernandez2.png" class="model-photo" alt="Lucía 2">
+  <img src="assets/lucia_fernandez3.png" class="model-photo" alt="Lucía 3">
+</div>
        </div>
        <h3 class="text-xl font-semibold text-gray-900 mb-2">Lucía Fernández</h3>
        <p class="text-gray-600 mb-3">20 años<br>Universitaria<br>Delgada</p>
@@ -158,11 +185,14 @@
        <!-- Model Card 6 -->
       <div class="model-card rounded-2xl p-6 shadow-lg">
        <div class="w-full h-64 bg-gradient-to-br from-orange-200 to-red-200 rounded-xl mb-4 flex items-center justify-center">
-        <div class="text-4xl">
-         👩🏿
-        </div>
+<div class="w-full h-64 bg-gradient-to-br from-red-200 to-pink-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden relative model-gallery">
+  <img src="assets/mara_ruiz1.png" class="model-photo active" alt="Mara 1">
+  <img src="assets/mara_ruiz2.png" class="model-photo" alt="Mara 2">
+  <img src="assets/mara_ruiz3.png" class="model-photo" alt="Mara 3">
+</div>
+
        </div>
-       <h3 class="text-xl font-semibold text-gray-900 mb-2">Amara Johnson</h3>
+       <h3 class="text-xl font-semibold text-gray-900 mb-2">Mara Ruíz</h3>
        <p class="text-gray-600 mb-3">20 años<br>Universitaria<br>Delgada</p>
        <div class="flex flex-wrap gap-2"><span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Pelinegra</span> <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">Fines de semana</span>
        </div>
@@ -172,7 +202,7 @@
     <!-- 🔽 Botón global de WhatsApp -->
     <div class="flex justify-center mt-8">
       <button
-        onclick="window.open('https://wa.me/5215512345678?text=Hola%2C%20quiero%20ver%20más%20información','_blank')"
+        onclick="window.location.href='pago.html'"
         class="bg-gradient-to-r from-green-500 to-green-600 text-white px-10 py-4 rounded-full font-semibold hover:from-green-400 hover:to-green-500 transition-all duration-300 shadow-lg">
         💬 Quiero pagar por el servicio
       </button>
@@ -215,7 +245,7 @@
 
     <!-- Línea divisoria y derechos -->
     <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-      <p>© 2025 Eróticos Colombia JAgency. Todos los derechos reservados.</p>
+      <p>© 2025 Eróticos Colombia Agency. Todos los derechos reservados.</p>
     </div>
   </div>
 </footer>
@@ -224,5 +254,76 @@
 
   <script src="script.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+
+<script>
+  // Rotar imágenes automáticamente en cada card
+  document.querySelectorAll('.model-card').forEach(card => {
+    const photos = card.querySelectorAll('.model-photo');
+    let index = 0;
+    if (photos.length > 0) {
+      setInterval(() => {
+        photos[index].classList.remove('active');
+        index = (index + 1) % photos.length;
+        photos[index].classList.add('active');
+      }, 4000); // cambia cada 2 segundos
+    }
+  });
+</script>
+
+<script>
+  // --- Slideshow automático ---
+  const galleries = document.querySelectorAll('.model-gallery');
+
+  galleries.forEach(gallery => {
+    const photos = gallery.querySelectorAll('.model-photo');
+    let index = 0;
+
+    setInterval(() => {
+      photos[index].classList.remove('active');
+      index = (index + 1) % photos.length;
+      photos[index].classList.add('active');
+    }, 2000);
+  });
+
+  // --- Modal interactivo ---
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const closeBtn = document.querySelector(".close");
+  const nextBtn = document.getElementById("nextPhoto");
+  const prevBtn = document.getElementById("prevPhoto");
+
+  let currentImages = [];
+  let currentIndex = 0;
+
+  // Al hacer click en el bloque de fotos
+  document.querySelectorAll('.model-gallery').forEach(gallery => {
+    gallery.addEventListener('click', () => {
+      currentImages = Array.from(gallery.querySelectorAll('.model-photo')).map(img => img.src);
+      currentIndex = 0;
+      modal.style.display = "block";
+      modalImg.src = currentImages[currentIndex];
+    });
+  });
+
+  // Cerrar modal
+  closeBtn.onclick = () => (modal.style.display = "none");
+
+  // Navegar
+  nextBtn.onclick = () => {
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    modalImg.src = currentImages[currentIndex];
+  };
+
+  prevBtn.onclick = () => {
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    modalImg.src = currentImages[currentIndex];
+  };
+
+  // Cerrar si se hace clic fuera
+  window.onclick = e => {
+    if (e.target === modal) modal.style.display = "none";
+  };
+</script>
+
 </body>
 </html>
