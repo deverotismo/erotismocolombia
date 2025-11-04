@@ -242,79 +242,86 @@
 </footer>
 
   </main>
-
-  <script src="script.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
-
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
-  // Rotar imágenes automáticamente en cada card
-  document.querySelectorAll('.model-card').forEach(card => {
-    const photos = card.querySelectorAll('.model-photo');
-    let index = 0;
-    if (photos.length > 0) {
-      setInterval(() => {
-        photos[index].classList.remove('active');
-        index = (index + 1) % photos.length;
-        photos[index].classList.add('active');
-      }, 4000); // cambia cada 2 segundos
-    }
-  });
-</script>
-
-<script>
-  // --- Slideshow automático ---
-  const galleries = document.querySelectorAll('.model-gallery');
-
-  galleries.forEach(gallery => {
-    const photos = gallery.querySelectorAll('.model-photo');
-    let index = 0;
-
+// ================================
+// 🔁 Rotación automática de imágenes
+// ================================
+document.querySelectorAll('.model-card').forEach(card => {
+  const photos = card.querySelectorAll('.model-photo');
+  let index = 0;
+  if (photos.length > 0) {
     setInterval(() => {
       photos[index].classList.remove('active');
       index = (index + 1) % photos.length;
       photos[index].classList.add('active');
-    }, 2000);
-  });
+    }, 4000);
+  }
+});
 
-  // --- Modal interactivo ---
-  const modal = document.getElementById("imageModal");
-  const modalImg = document.getElementById("modalImage");
-  const closeBtn = document.querySelector(".close");
-  const nextBtn = document.getElementById("nextPhoto");
-  const prevBtn = document.getElementById("prevPhoto");
+// ================================
+// 🖼️ Modal interactivo (galería ampliada)
+// ================================
+document.addEventListener("DOMContentLoaded", () => {
+  // Crear el modal dinámicamente (no necesitas tenerlo en el HTML)
+  const modal = document.createElement("div");
+  modal.classList.add("modal");
+  modal.innerHTML = `
+    <span class="close">&times;</span>
+    <img class="modal-image" src="" alt="Vista ampliada">
+    <div class="modal-controls">
+      <button class="nav-btn prev">&#10094;</button>
+      <button class="nav-btn next">&#10095;</button>
+    </div>
+  `;
+  document.body.appendChild(modal);
 
-  let currentImages = [];
+  const modalImg = modal.querySelector(".modal-image");
+  const closeBtn = modal.querySelector(".close");
+  const prevBtn = modal.querySelector(".prev");
+  const nextBtn = modal.querySelector(".next");
+
+  let currentGallery = [];
   let currentIndex = 0;
 
-  // Al hacer click en el bloque de fotos
-  document.querySelectorAll('.model-gallery').forEach(gallery => {
-    gallery.addEventListener('click', () => {
-      currentImages = Array.from(gallery.querySelectorAll('.model-photo')).map(img => img.src);
-      currentIndex = 0;
-      modal.style.display = "block";
-      modalImg.src = currentImages[currentIndex];
-    });
+  function openModal(images, index) {
+    currentGallery = images;
+    currentIndex = index;
+    modalImg.src = currentGallery[currentIndex].src;
+    modal.style.display = "block";
+  }
+
+  // Cerrar el modal
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
   });
 
-  // Cerrar modal
-  closeBtn.onclick = () => (modal.style.display = "none");
-
-  // Navegar
-  nextBtn.onclick = () => {
-    currentIndex = (currentIndex + 1) % currentImages.length;
-    modalImg.src = currentImages[currentIndex];
-  };
-
-  prevBtn.onclick = () => {
-    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-    modalImg.src = currentImages[currentIndex];
-  };
-
   // Cerrar si se hace clic fuera
-  window.onclick = e => {
+  modal.addEventListener("click", e => {
     if (e.target === modal) modal.style.display = "none";
-  };
+  });
+
+  // Navegar entre fotos
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % currentGallery.length;
+    modalImg.src = currentGallery[currentIndex].src;
+  });
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+    modalImg.src = currentGallery[currentIndex].src;
+  });
+
+  // Asignar evento de click a todas las galerías
+  document.querySelectorAll(".model-gallery").forEach(gallery => {
+    const images = gallery.querySelectorAll("img");
+    images.forEach((img, index) => {
+      img.addEventListener("click", () => openModal(images, index));
+    });
+  });
+});
 </script>
+
 
       <div id="imageModal" class="modal">
   <span class="close">&times;</span>
