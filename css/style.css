@@ -78,6 +78,13 @@ body {
   height: 100%;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ Cuando el modal se muestra */
+.modal.show {
+  display: flex;
 }
 
 .modal-image {
@@ -99,17 +106,19 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .close:hover {
   color: #dc2626;
 }
 
 .modal-controls {
   position: absolute;
-  bottom: 50%;
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0 40px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .nav-btn {
@@ -122,6 +131,7 @@ body {
   cursor: pointer;
   transition: background 0.3s;
 }
+
 .nav-btn:hover {
   background: rgba(220, 38, 38, 0.7);
 }
